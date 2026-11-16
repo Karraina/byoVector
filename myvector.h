@@ -57,7 +57,7 @@ public:
 
 	void push_back(const T& value) {
 		if (array_size == space) {
-			if (space == space) {
+			if (space == 0) {
 				reserve(1);
 			}
 			else {
