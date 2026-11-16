@@ -51,7 +51,6 @@ public:
 		}
 
 		delete[] elem;
-
 		elem = new_elem;
 		space = new_capacity;
 	}
