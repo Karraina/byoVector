@@ -25,6 +25,7 @@ int main() {
             << endl;
     }
 
+
     cout << "\nStored numbers:\n";
 
     for (size_t i = 0; i < numbers.size(); i++) {
