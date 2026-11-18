@@ -33,6 +33,20 @@ public:
 		return space;
 	}
 
+	bool empty() const {
+    		return array_size == 0;
+	}
+
+	void pop_back() {
+		if (!empty()) {
+			array_size--;
+		}
+	}
+
+	void clear() {
+		array_size = 0;
+	}
+
 	void reserve(std::size_t new_capacity) {
 		if (new_capacity <= space) {
 			return;

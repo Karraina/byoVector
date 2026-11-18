@@ -17,7 +17,7 @@ int main() {
     cout << "\nAdding numbers...\n";
 
     for (int i = 1; i <= 6; i++) {
-        numbers.push_back(i * 10); // 10-60 by 10
+        numbers.push_back(i * 10);
 
         cout << "Added " << i * 10
             << " | Size: " << numbers.size()
@@ -31,7 +31,62 @@ int main() {
         cout << numbers.at(i) << " ";
     }
 
-    cout << "\n\nTesting element modification...\n";
+    cout << "\nSize: " << numbers.size() << endl;
+    cout << "Capacity: " << numbers.capacity() << endl;
+
+    cout << "\nTesting pop_back()...\n";
+
+    numbers.pop_back();
+
+    cout << "After pop_back():\n";
+
+    for (size_t i = 0; i < numbers.size(); i++) {
+        cout << numbers.at(i) << " ";
+    }
+
+    cout << "\nSize: " << numbers.size() << endl;
+    cout << "Capacity: " << numbers.capacity() << endl;
+
+    cout << "\nTesting empty()...\n";
+
+    if (numbers.empty()) {
+        cout << "The vector is empty." << endl;
+    }
+    else {
+        cout << "The vector is not empty." << endl;
+    }
+
+    cout << "\nTesting clear()...\n";
+
+    numbers.clear();
+
+    cout << "After clear():\n";
+    cout << "Size: " << numbers.size() << endl;
+    cout << "Capacity: " << numbers.capacity() << endl;
+
+    if (numbers.empty()) {
+        cout << "The vector is empty." << endl;
+    }
+    else {
+        cout << "The vector is not empty." << endl;
+    }
+
+    cout << "\nAdding new elements after clear()...\n";
+
+    numbers.push_back(100);
+    numbers.push_back(200);
+    numbers.push_back(300);
+
+    cout << "Stored numbers after clear():\n";
+
+    for (size_t i = 0; i < numbers.size(); i++) {
+        cout << numbers.at(i) << " ";
+    }
+
+    cout << "\nSize: " << numbers.size() << endl;
+    cout << "Capacity: " << numbers.capacity() << endl;
+
+    cout << "\nTesting element modification...\n";
     numbers.at(0) = 100;
     cout << "First element: " << numbers.at(0) << endl;
 
