@@ -20,8 +20,8 @@ int main() {
         numbers.push_back(i * 10);
 
         cout << "Added " << i * 10
-            << " | Size: " << numbers.size()
-            << " | Capacity: " << numbers.capacity()
+            << " | size: " << numbers.size()
+            << " | capacity: " << numbers.capacity()
             << endl;
     }
 
